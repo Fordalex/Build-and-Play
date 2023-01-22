@@ -1,3 +1,5 @@
+let activeMenuItem = 'blank';
+
 let clickDown = false;
 document.addEventListener('mousedown', () => clickDown = true);
 document.addEventListener('mouseup', () => clickDown = false);
@@ -15,14 +17,14 @@ function updatePixelTypeMouseOver() {
 }
 
 function updatePixelType() {
-    if (activeMenuItem === 'player') {
-        removePlayerPixel();
-    } 
+    if (activeMenuItem === 'player1' || activeMenuItem === 'player2') {
+        removePlayerPixel(activeMenuItem);
+    }
     this.dataset.pixelType = activeMenuItem;
 }
 
-function removePlayerPixel() {
-    let playerPixel = document.querySelector('[data-pixel-type="player"]');
+function removePlayerPixel(player) {
+    let playerPixel = document.querySelector(`[data-pixel-type="${player}"]`);
     if (!playerPixel) { return }
 
     playerPixel.dataset.pixelType = 'blank';

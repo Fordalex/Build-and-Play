@@ -58,8 +58,12 @@ h1, h3 {
     background-color: rgb(144, 144, 144);
 }
 
-[data-pixel-type="player"] {
+[data-pixel-type="player1"] {
     background-color: rgb(57, 60, 255);
+}
+
+[data-pixel-type="player2"] {
+    background-color: rgb(39, 179, 160);
 }
 
 [data-pixel-type="goal"] {
@@ -68,4 +72,8 @@ h1, h3 {
 
 [data-pixel-type="enemy"] {
     background-color: rgb(220, 57, 39);
+}
+
+[data-pixel-type="box"] {
+    background-color: rgb(144, 105, 14);
 }
